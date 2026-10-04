@@ -1,4 +1,4 @@
-/* Pro Installers SA: small helpers, no dependencies */
+/* Instafix: small helpers, no dependencies */
 (function () {
   var WA = "27839853567";
 
@@ -32,7 +32,7 @@
   document.getElementById("form-wa").addEventListener("click", function () {
     if (!form.reportValidity()) return;
     var d = new FormData(form);
-    var text = "Hi Pro Installers SA, I would like a quote.\n" +
+    var text = "Hi Instafix, I would like a quote.\n" +
       "Name: " + d.get("name") + "\n" +
       "Phone: " + d.get("phone") + "\n" +
       "Service: " + d.get("service") +

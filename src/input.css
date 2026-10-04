@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@source "../*.html";
+
+@theme {
+  --color-ink: #0E2A47;
+  --color-sky: #1C6FD1;
+  --color-ice: #7CC4FA;
+  --color-frost: #EEF5FC;
+  --color-flame: #C2410C;
+  --color-flame-dark: #9A3412;
+  --color-flame-bright: #F26B1D;
+  --color-wa: #128C4A;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", system-ui, sans-serif;
+  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  :focus-visible { outline: 3px solid var(--color-ice); outline-offset: 2px; }
+  img { max-width: 100%; height: auto; }
+}
+
+@layer components {
+  .btn-call { background: var(--color-flame); color: #fff; transition: background-color .15s; }
+  .btn-call:hover { background: var(--color-flame-dark); }
+  .btn-wa { background: var(--color-wa); color: #fff; transition: background-color .15s; }
+  .btn-wa:hover { background: #0E6E3A; }
+  .bar-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; font-weight: 700; font-size: .9rem; }
+  .tick { position: relative; padding-left: 1.5rem; }
+  .tick::before { content: ""; position: absolute; left: 0; top: .45em; width: .9rem; height: .5rem; border-left: 2.5px solid var(--color-sky); border-bottom: 2.5px solid var(--color-sky); transform: rotate(-45deg); }
+  .area { background: #fff; border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent); border-radius: 999px; padding: .45rem 1rem; font-weight: 600; }
+  .quote { border-left: 4px solid var(--color-ice); padding: .25rem 0 .25rem 1.25rem; }
+  .quote blockquote { font-size: 1.125rem; line-height: 1.55; }
+  .quote figcaption { margin-top: .75rem; font-weight: 600; color: color-mix(in srgb, var(--color-ink) 65%, transparent); }
+  .faq summary { cursor: pointer; list-style: none; padding: 1.1rem 2rem 1.1rem 0; position: relative; font-weight: 600; font-size: 1.125rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: .25rem; top: .8rem; font-size: 1.6rem; line-height: 1; color: var(--color-sky); }
+  .faq[open] summary::after { content: "\2212"; }
+  .faq p { padding-bottom: 1.1rem; color: color-mix(in srgb, var(--color-ink) 75%, transparent); }
+  .field-label { display: block; font-weight: 600; margin-bottom: .35rem; }
+  .field { width: 100%; background: #fff; border: 1.5px solid color-mix(in srgb, var(--color-ink) 18%, transparent); border-radius: .75rem; padding: .85rem 1rem; font-size: 1rem; min-height: 3.25rem; }
+  .field:focus { border-color: var(--color-sky); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-sky) 25%, transparent); }
+}

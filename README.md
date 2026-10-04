@@ -1,4 +1,4 @@
-# Pro Installers SA website
+# Instafix website
 
 Static one page site (plus a thank you page). Hosts free on Cloudflare Pages, or on Vercel. No server, no database, no monthly costs apart from the domain.
 

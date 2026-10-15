@@ -16,7 +16,7 @@ pro-installers-sa/
   apple-touch-icon.png
   assets/
     css/style.css       Compiled Tailwind CSS (no CDN needed)
-    js/main.js          Form, WhatsApp and click tracking helpers
+    js/main.js          Quote builder steps, WhatsApp message, photo viewer, scroll reveal, click tracking
   images/
     logo.svg, logo.png
     hero.jpg, team.jpg, og-image.jpg
@@ -58,7 +58,7 @@ The form uses FormSubmit (free, no account). After the site is live:
 2. FormSubmit emails proinstallerssa@gmail.com an activation link. Click it.
 3. From then on every request lands in that inbox. Check spam the first time and mark it "Not spam".
 
-The "Send on WhatsApp instead" button works immediately with no setup.
+The quote builder is a three step form (service, site, contact details). The "Send on WhatsApp" button works immediately with no setup and sends the answers as a ready made message. "Call me back instead" goes through FormSubmit as above.
 
 ## 5. Google Ads conversion tracking
 
@@ -71,7 +71,9 @@ The "Send on WhatsApp instead" button works immediately with no setup.
 ## 6. Replace before running ads
 
 - **Testimonials**: the three reviews are placeholders. Replace them with real customer reviews (ideally from the Google Business Profile). Invented reviews breach Google Ads misrepresentation policy.
-- **Service areas**: Centurion and Midrand were added as "in between" areas. Remove them if the client does not cover them (also in the JSON-LD schema in `index.html`).
+- **Service areas**: the Areas section lists suburbs in Tshwane, Johannesburg, Ekurhuleni and the West Rand to show Gauteng wide cover. Remove any the client does not want to travel to.
+- **Claims to confirm with the client**: "Tested and running before we leave", "Work scheduled around your trading hours", maintenance plans for homes and businesses, and the inverter advice. Change or remove any that are not accurate.
+- **Email**: proinstallerssa@gmail.com is a setup address. Swap it for info@ on the final domain once that mailbox exists (search index.html and the form `action`).
 - **Google Business Profile**: set one up at the Moreleta Park address. It matters more for "near me" searches than the website does.
 
 ## 7. Changing styles
